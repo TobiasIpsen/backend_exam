@@ -1,0 +1,62 @@
+### Get all trips
+GET {{url}}/trips
+Accept: application/json
+
+### Get single trip
+GET {{url}}/trips/1
+Accept: application/json
+
+### Create new trip
+POST {{url}}/trips
+Accept: application/json
+Content-Type: application/json
+
+{
+  "startTime": "10:00",
+  "endTime": "18:00",
+  "startPosition": "Tallinn",
+  "name": "Trip to Tallinn",
+  "price": 100,
+  "category": "CITY"
+}
+
+### Update trip
+PUT {{url}}/trips/4
+Accept: application/json
+Content-Type: application/json
+
+{
+  "startTime": "09:00",
+  "endTime": "20:00",
+  "startPosition": "Tallinn",
+  "name": "Trip to Tallinn",
+  "price": 100,
+  "category": "CITY"
+}
+
+### Delete trip
+DELETE {{url}}/trips/4
+
+### Add guide to Trip
+PUT {{url}}/trips/4/guides/1
+accept: application/json
+
+### Populate Database
+POST {{url}}/trips/populate
+accept: application/json
+
+### Trips By Category
+GET {{url}}/trips/category/CITY
+accept: application/json
+
+### Trips By Guide
+GET {{url}}/trips/guides/totalPrice
+accept: application/json
+
+### Get packinglist from category
+GET {{url}}/trips/category/packinglist/beach
+accept: application/json
+
+### Get packing item weights from trip
+GET {{url}}/trips/1/packingweight
+accept: application/json
